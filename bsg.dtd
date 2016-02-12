@@ -1,0 +1,35 @@
+﻿<!ELEMENT Machine (Global,Blocks)>
+<!ELEMENT Blocks (Block*)>
+<!ELEMENT Block (Transform,Data)>
+
+<!ATTLIS Machine version CDATA #FIXED "1">
+<!ATTLIS Machine name CDATA #REQUIRED>
+<!ATTLIS Block id CDATA #REQUIRED>
+<!ATTLIS Block guid CDATA #REQUIRED>
+<!ATTLIS Position x CDATA #REQUIRED>
+<!ATTLIS Position y CDATA #REQUIRED>
+<!ATTLIS Position z CDATA #REQUIRED>
+<!ATTLIS Rotation x CDATA #REQUIRED>
+<!ATTLIS Rotation y CDATA #REQUIRED>
+<!ATTLIS Rotation z CDATA #REQUIRED>
+<!ATTLIS Rotation w CDATA #REQUIRED>
+<!ATTLIS Scale x CDATA #REQUIRED>
+<!ATTLIS Scale y CDATA #REQUIRED>
+<!ATTLIS Scale z CDATA #REQUIRED>
+
+<!ATTLIS Vector3 key CDATA (start-position|end-position) "start-position">
+<!ELEMENT Vector3 (X,Y,Z)>
+<!ELEMENT X (#PCDATA)>
+<!ELEMENT Y (#PCDATA)>
+<!ELEMENT Z (#PCDATA)>
+<!ATTLIS StringArray key CDATA #REQUIRED>
+<!ELEMENT StringArrat (#PCDATA)>
+<!ATTLIS Single key CDATA #REQUIRED>
+<!ELEMENT Single (#PCDATA)>
+<!ATTLIS Boolean key CDATA #REQUIRED>
+<!ELEMENT Boolean (#PCDATA)>
+
+<!ELEMENT Global (Position,Rotation)>
+<!ELEMENT Transform (Position,Rotation,Scale)>
+<!ELEMENT Data (SrringArray*,Singe*,Boolean*,(Vector,Vector)?)>
+<!-- By siiftun1857 -->
