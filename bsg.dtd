@@ -1,3 +1,4 @@
+<!-- Bsg Machine files DTD version1.0 -->
 ﻿<!ELEMENT Machine (Global,Blocks)>
 <!ELEMENT Blocks (Block*)>
 <!ELEMENT Block (Transform,Data)>
@@ -31,5 +32,5 @@
 
 <!ELEMENT Global (Position,Rotation)>
 <!ELEMENT Transform (Position,Rotation,Scale)>
-<!ELEMENT Data (SrringArray*,Singe*,Boolean*,(Vector,Vector)?)>
+<!ELEMENT Data (SrringArray*,Singe*,Boolean*,(Vector3,Vector3)?)>
 <!-- By siiftun1857 -->
