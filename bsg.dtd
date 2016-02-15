@@ -1,4 +1,4 @@
-<!-- Bsg Machine files DTD version1.0 -->
+<!-- Bsg Machine files DTD version 1.1 -->
 ﻿<!ELEMENT Machine (Global,Blocks)>
 <!ELEMENT Blocks (Block*)>
 <!ELEMENT Block (Transform,Data)>
@@ -17,6 +17,9 @@
 <!ATTLIS Scale x CDATA #REQUIRED>
 <!ATTLIS Scale y CDATA #REQUIRED>
 <!ATTLIS Scale z CDATA #REQUIRED>
+<!ELEMENT Position EMPTY>
+<!ELEMENT Rotation EMPTY>
+<!ELEMENT Scale EMPTY>
 
 <!ATTLIS Vector3 key CDATA (start-position|end-position) "start-position">
 <!ELEMENT Vector3 (X,Y,Z)>
@@ -25,6 +28,7 @@
 <!ELEMENT Z (#PCDATA)>
 <!ATTLIS StringArray key CDATA #REQUIRED>
 <!ELEMENT StringArrat (#PCDATA)>
+
 <!ATTLIS Single key CDATA #REQUIRED>
 <!ELEMENT Single (#PCDATA)>
 <!ATTLIS Boolean key CDATA #REQUIRED>
