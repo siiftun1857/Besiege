@@ -4,6 +4,9 @@
 <!ELEMENT Blocks (Block*)>
 <!ELEMENT Block (Transform,Data)>
 
+<!ELEMENT Position EMPTY>
+<!ELEMENT Rotation EMPTY>
+<!ELEMENT Scale EMPTY>
 <!ATTLIST Machine version CDATA #FIXED "1">
 <!ATTLIST Machine name CDATA #REQUIRED>
 <!ATTLIST Block id CDATA #REQUIRED>
@@ -18,9 +21,6 @@
 <!ATTLIST Scale x CDATA #REQUIRED>
 <!ATTLIST Scale y CDATA #REQUIRED>
 <!ATTLIST Scale z CDATA #REQUIRED>
-<!ELEMENT Position EMPTY>
-<!ELEMENT Rotation EMPTY>
-<!ELEMENT Scale EMPTY>
 
 <!ELEMENT X (#PCDATA)>
 <!ELEMENT Y (#PCDATA)>
