@@ -3,6 +3,9 @@
 <!ELEMENT Machine (Global,Blocks)>
 <!ELEMENT Blocks (Block*)>
 <!ELEMENT Block (Transform,Data)>
+<!ELEMENT Global (Position,Rotation)>
+<!ELEMENT Transform (Position,Rotation,Scale)>
+<!ELEMENT Data (StringArray*,Single*,Boolean*,(Vector3,Vector3)?)>
 
 <!ELEMENT Position EMPTY>
 <!ELEMENT Rotation EMPTY>
@@ -34,7 +37,4 @@
 <!ATTLIST Boolean key CDATA #REQUIRED>
 <!ATTLIST Vector3 key CDATA #REQUIRED>
 
-<!ELEMENT Global (Position,Rotation)>
-<!ELEMENT Transform (Position,Rotation,Scale)>
-<!ELEMENT Data (StringArray*,Single*,Boolean*,(Vector3,Vector3)?)>
 <!-- By siiftun1857 -->
