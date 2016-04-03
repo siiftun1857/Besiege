@@ -1,5 +1,5 @@
 <!-- Bsg Machine files DTD version 1.5 for besiege 0.27 -->
-<!-- https://raw.githubusercontent.com/siiftun1857/Webs/master/bsg.dtd -->
+<!-- https://raw.githubusercontent.com/siiftun1857/Webs/master/bsg_0.27.dtd -->
 <!ELEMENT Machine (Global,Blocks)>
 <!ELEMENT Blocks (Block*)>
 <!ELEMENT Block (Transform,Data)>
