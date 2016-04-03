@@ -1,0 +1,42 @@
+<!-- Bsg Machine files DTD version 1.4 for besiege 0.25 -->
+<!-- https://raw.githubusercontent.com/siiftun1857/Webs/master/bsg.dtd -->
+<!ELEMENT Machine (Global,Blocks)>
+<!ELEMENT Blocks (Block*)>
+<!ELEMENT Block (Transform,Data)>
+<!ELEMENT Global (Position,Rotation)>
+<!ELEMENT Transform (Position,Rotation,Scale)>
+<!ELEMENT Data (StringArray*,Single*,Boolean*,Vector3*)>
+
+<!ELEMENT Position EMPTY>
+<!ELEMENT Rotation EMPTY>
+<!ELEMENT Scale EMPTY>
+<!ATTLIST Machine version CDATA #FIXED "1">
+<!ATTLIST Machine name CDATA #REQUIRED>
+<!ATTLIST Block id CDATA #REQUIRED>
+<!ATTLIST Block guid CDATA #REQUIRED>
+<!ATTLIST Position x CDATA #REQUIRED>
+<!ATTLIST Position y CDATA #REQUIRED>
+<!ATTLIST Position z CDATA #REQUIRED>
+<!ATTLIST Rotation x CDATA #REQUIRED>
+<!ATTLIST Rotation y CDATA #REQUIRED>
+<!ATTLIST Rotation z CDATA #REQUIRED>
+<!ATTLIST Rotation w CDATA #REQUIRED>
+<!ATTLIST Scale x CDATA #REQUIRED>
+<!ATTLIST Scale y CDATA #REQUIRED>
+<!ATTLIST Scale z CDATA #REQUIRED>
+
+<!ELEMENT X (#PCDATA)>
+<!ELEMENT Y (#PCDATA)>
+<!ELEMENT Z (#PCDATA)>
+<!ELEMENT String (#PCDATA)>
+<!ELEMENT StringArray (#PCDATA)>
+<!ELEMENT Single (#PCDATA)>
+<!ELEMENT Boolean (#PCDATA)>
+<!ELEMENT Vector3 (X,Y,Z)>
+<!ATTLIST String key CDATA #REQUIRED>
+<!ATTLIST StringArray key CDATA #REQUIRED>
+<!ATTLIST Single key CDATA #REQUIRED>
+<!ATTLIST Boolean key CDATA #REQUIRED>
+<!ATTLIST Vector3 key CDATA #REQUIRED>
+
+<!-- By siiftun1857 -->
