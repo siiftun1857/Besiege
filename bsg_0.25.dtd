@@ -1,29 +1,34 @@
-<!-- Bsg Machine files DTD version 1.4 for besiege 0.25 -->
+<!-- Bsg Machine files DTD version 1.3 -->
 <!-- https://raw.githubusercontent.com/siiftun1857/Webs/master/bsg.dtd -->
 <!ELEMENT Machine (Global,Blocks)>
 <!ELEMENT Blocks (Block*)>
 <!ELEMENT Block (Transform,Data)>
 <!ELEMENT Global (Position,Rotation)>
 <!ELEMENT Transform (Position,Rotation,Scale)>
-<!ELEMENT Data (StringArray*,Single*,Boolean*,Vector3*)>
+<!ELEMENT Data (StringArray*,Single*,Boolean*,(Vector3,Vector3)?)>
 
 <!ELEMENT Position EMPTY>
 <!ELEMENT Rotation EMPTY>
 <!ELEMENT Scale EMPTY>
-<!ATTLIST Machine version CDATA #FIXED "1">
-<!ATTLIST Machine name CDATA #REQUIRED>
-<!ATTLIST Block id CDATA #REQUIRED>
-<!ATTLIST Block guid CDATA #REQUIRED>
-<!ATTLIST Position x CDATA #REQUIRED>
-<!ATTLIST Position y CDATA #REQUIRED>
-<!ATTLIST Position z CDATA #REQUIRED>
-<!ATTLIST Rotation x CDATA #REQUIRED>
-<!ATTLIST Rotation y CDATA #REQUIRED>
-<!ATTLIST Rotation z CDATA #REQUIRED>
-<!ATTLIST Rotation w CDATA #REQUIRED>
-<!ATTLIST Scale x CDATA #REQUIRED>
-<!ATTLIST Scale y CDATA #REQUIRED>
-<!ATTLIST Scale z CDATA #REQUIRED>
+
+<!ATTLIST Machine
+  version CDATA #FIXED "1"
+  name CDATA #REQUIRED>
+<!ATTLIST Block
+  id CDATA #REQUIRED
+  guid CDATA #REQUIRED>
+<!ATTLIST Position 
+  x CDATA #REQUIRED
+  y CDATA #REQUIRED
+  z CDATA #REQUIRED>
+<!ATTLIST Rotation x CDATA #REQUIRED
+  y CDATA #REQUIRED
+  z CDATA #REQUIRED
+  w CDATA #REQUIRED>
+<!ATTLIST Scale
+  x CDATA #REQUIRED
+  y CDATA #REQUIRED
+  z CDATA #REQUIRED>
 
 <!ELEMENT X (#PCDATA)>
 <!ELEMENT Y (#PCDATA)>
@@ -38,5 +43,3 @@
 <!ATTLIST Single key CDATA #REQUIRED>
 <!ATTLIST Boolean key CDATA #REQUIRED>
 <!ATTLIST Vector3 key CDATA #REQUIRED>
-
-<!-- By siiftun1857 -->
