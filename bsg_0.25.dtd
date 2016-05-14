@@ -1,4 +1,4 @@
-<!-- Bsg Machine files DTD version 1.3 for besiege 0.25 -->
+<!-- Bsg Machine files DTD version 1.0.2 for besiege 0.25 -->
 <!-- https://raw.githubusercontent.com/siiftun1857/Webs/master/bsg_0.25.dtd -->
 <!ELEMENT Machine (Global,Blocks)>
 <!ELEMENT Blocks (Block*)>
