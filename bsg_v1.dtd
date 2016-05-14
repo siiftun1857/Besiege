@@ -1,11 +1,11 @@
-<!-- Bsg Machine files DTD version 1.5 for besiege 0.27 -->
+<!-- Bsg Machine files DTD version 1.1.4 for besiege 0.27 -->
 <!-- https://raw.githubusercontent.com/siiftun1857/Webs/master/bsg_v1.dtd -->
 <!ELEMENT Machine (Global,Blocks)>
 <!ELEMENT Blocks (Block*)>
 <!ELEMENT Block (Transform,Data)>
 <!ELEMENT Global (Position,Data,Rotation)>
 <!ELEMENT Transform (Position,Rotation,Scale)>
-<!ELEMENT Data (StringArray*,String*,Single*,Boolean*,Vector3*,Color*,MKey*,MMenu*,MToggle*,MSlider*,MLimits*,MColourSlider*)>
+<!ELEMENT Data (String*,StringArray*,String*,Single*,Boolean*,Vector3*,Color*,MKey*,MMenu*,MToggle*,MSlider*,MLimits*,MColourSlider*)>
 
 <!ELEMENT Position EMPTY>
 <!ELEMENT Rotation EMPTY>
