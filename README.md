@@ -11,4 +11,4 @@
 ```dtd
 <!DOCTYPE Machine SYSTEM "https://raw.githubusercontent.com/siiftun1857/Webs/master/bsg_0.3.dtd">
 ```
-来引用bsg0.3dtd
+来引用bsg0.3的dtd
