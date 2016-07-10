@@ -5,6 +5,7 @@
 <!ELEMENT Block (Transform,Data)>
 <!ELEMENT Global (Position,Data,Rotation)>
 <!ELEMENT Transform (Position,Rotation,Scale)>
+<!ELEMENT Settings EMPTY>
 <!ELEMENT Data (StringArray*,String*,Single*,Boolean*,Vector3*,Color*,MKey*,MMenu*,MToggle*,MSlider*,MLimits*,MColourSlider*)>
 
 <!ELEMENT Position EMPTY>
@@ -16,7 +17,10 @@
   name CDATA #REQUIRED>
 <!ATTLIST Block
   id CDATA #REQUIRED
-  guid CDATA #REQUIRED>
+  guid CDATA #REQUIRED
+<!ATTLIST Settings
+  name CDATA #REQUIRED
+  id CDATA #REQUIRED>
 <!ATTLIST Position 
   x CDATA #REQUIRED
   y CDATA #REQUIRED
