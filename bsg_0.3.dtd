@@ -3,10 +3,10 @@
 <!ELEMENT Machine (Global,Data,Blocks)>
 <!ELEMENT Blocks (Block*)>
 <!ELEMENT Block (Transform,Settings,Data)>
-<!ELEMENT Global (Position,Data,Rotation)>
+<!ELEMENT Global (Position,Rotation)>
 <!ELEMENT Transform (Position,Rotation,Scale)>
 <!ELEMENT Settings (Skins)>
-<!ELEMENT Data (StringArray*,String*,Single*,Boolean*,Vector3*,Color*,MKey*,MMenu*,MToggle*,MSlider*,MLimits*,MColourSlider*)>
+<!ELEMENT Data (StringArray*String*Single*Boolean*Vector3*Color*MKey*MMenu*MToggle*MSlider*MLimits*MColourSlider*)>
 
 <!ELEMENT Position EMPTY>
 <!ELEMENT Rotation EMPTY>
@@ -25,7 +25,8 @@
   x CDATA #REQUIRED
   y CDATA #REQUIRED
   z CDATA #REQUIRED>
-<!ATTLIST Rotation x CDATA #REQUIRED
+<!ATTLIST Rotation
+  x CDATA #REQUIRED
   y CDATA #REQUIRED
   z CDATA #REQUIRED
   w CDATA #REQUIRED>
