@@ -5,7 +5,7 @@
 <!ELEMENT Block (Transform,Data)>
 <!ELEMENT Global (Position,Rotation)>
 <!ELEMENT Transform (Position,Rotation,Scale)>
-<!ELEMENT Data (StringArray*,String*,Single*,Boolean*,Vector3*)>
+<!ELEMENT Data (StringArray*String*Single*Boolean*Vector3*)>
 
 <!ELEMENT Position EMPTY>
 <!ELEMENT Rotation EMPTY>
@@ -21,7 +21,8 @@
   x CDATA #REQUIRED
   y CDATA #REQUIRED
   z CDATA #REQUIRED>
-<!ATTLIST Rotation x CDATA #REQUIRED
+<!ATTLIST Rotation
+  x CDATA #REQUIRED
   y CDATA #REQUIRED
   z CDATA #REQUIRED
   w CDATA #REQUIRED>
