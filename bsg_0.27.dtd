@@ -5,7 +5,7 @@
 <!ELEMENT Block (Transform,Data)>
 <!ELEMENT Global (Position,Rotation)>
 <!ELEMENT Transform (Position,Rotation,Scale)>
-<!ELEMENT Data (StringArray*String*Single*Boolean*Vector3*Color*MKey*MMenu*MToggle*MSlider*MLimits*MColourSlider*)>
+<!ELEMENT Data (StringArray*,String*,Single*,Boolean*,Vector3*,Color*,MKey*,MMenu*,MToggle*,MSlider*,MLimits*,MColourSlider*)>
 
 <!ELEMENT Position EMPTY>
 <!ELEMENT Rotation EMPTY>
