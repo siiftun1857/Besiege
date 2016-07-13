@@ -14,7 +14,7 @@
 
 <!ATTLIST Machine
   version CDATA #FIXED "1"
-  bsgVersion CDATA #REQUIRED
+  bsgVersion CDATA #IMPLIED
   name CDATA #REQUIRED>
 <!ATTLIST Block
   id CDATA #REQUIRED
