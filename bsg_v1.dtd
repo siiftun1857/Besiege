@@ -5,7 +5,7 @@
 <!ELEMENT Block (Transform,Settings?,Data)>
 <!ELEMENT Global (Position,Rotation)>
 <!ELEMENT Transform (Position,Rotation,Scale)>
-<!ELEMENT Settings (Skins)>
+<!ELEMENT Settings (Skin)>
 <!ELEMENT Data (StringArray*,String*,Single*,Boolean*,Vector3*,Color*,MKey*,MMenu*,MToggle*,MSlider*,MLimits*,MColourSlider*)>
 
 <!ELEMENT Position EMPTY>
@@ -14,6 +14,7 @@
 
 <!ATTLIST Machine
   version CDATA #FIXED "1"
+  bsgVersion CDATA #REQUIRED
   name CDATA #REQUIRED>
 <!ATTLIST Block
   id CDATA #REQUIRED
