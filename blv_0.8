@@ -16,45 +16,47 @@
 
 <!ATTLIST LevelSettings
   EditorVersion CDATA #REQUIRED
-  UseVoting CDATA #REQUIRED
-  CurtainMode CDATA #REQUIRED
-  AllowExcessPlayers CDATA #REQUIRED
-  HidePlayerLabels CDATA #REQUIRED
-  AllowCopyMachine CDATA #REQUIRED
-  allowModMachines CDATA #REQUIRED
-  Environment CDATA #REQUIRED>
+  UseVoting type (true|false) #REQUIRED
+  CurtainMode type (true|false) #REQUIRED
+  AllowExcessPlayers type (true|false) #REQUIRED
+  HidePlayerLabels type (true|false) #REQUIRED
+  AllowCopyMachine type (true|false) #REQUIRED
+  allowModMachines type (true|false) #REQUIRED
+  Environment CDATA #REQUIRED
+  MinPlayers CDATA #IMPLIED
+  MaxPlayers CDATA #IMPLIED>
   
 <!ATTLIST DisableFire
-  Enabled CDATA #REQUIRED
-  Locked CDATA #REQUIRED>
+  Enabled type (true|false) #REQUIRED
+  Locked type (true|false) #REQUIRED>
 <!ELEMENT DisableFire EMPTY>
 <!ATTLIST DisableExplosion
-  Enabled CDATA #REQUIRED
-  Locked CDATA #REQUIRED>
+  Enabled type (true|false) #REQUIRED
+  Locked type (true|false) #REQUIRED>
 <!ELEMENT DisableExplosion EMPTY>
 <!ATTLIST DisableProjectiles
-  Enabled CDATA #REQUIRED
-  Locked CDATA #REQUIRED>
+  Enabled type (true|false) #REQUIRED
+  Locked type (true|false) #REQUIRED>
 <!ELEMENT DisableProjectiles EMPTY>
 <!ATTLIST ZeroG
-  Enabled CDATA #REQUIRED
-  Locked CDATA #REQUIRED>
+  Enabled type (true|false) #REQUIRED
+  Locked type (true|false) #REQUIRED>
 <!ELEMENT ZeroG EMPTY>
 <!ATTLIST InfiniteAmmo
-  Enabled CDATA #REQUIRED
-  Locked CDATA #REQUIRED>
+  Enabled type (true|false) #REQUIRED
+  Locked type (true|false) #REQUIRED>
 <!ELEMENT InfiniteAmmo EMPTY>
 <!ATTLIST Invincibility
-  Enabled CDATA #REQUIRED
-  Locked CDATA #REQUIRED>
+  Enabled type (true|false) #REQUIRED
+  Locked type (true|false) #REQUIRED>
 <!ELEMENT Invincibility EMPTY>
 <!ATTLIST ExplosiveCannonballs
-  Enabled CDATA #REQUIRED
-  Locked CDATA #REQUIRED>
+  Enabled type (true|false) #REQUIRED
+  Locked type (true|false) #REQUIRED>
 <!ELEMENT ExplosiveCannonballs EMPTY>
 <!ATTLIST DisableBounds
-  Enabled CDATA #REQUIRED
-  Locked CDATA #REQUIRED>
+  Enabled type (true|false) #REQUIRED
+  Locked type (true|false) #REQUIRED>
 <!ELEMENT DisableBounds EMPTY>
 
 <!ATTLIST BlockLimit
