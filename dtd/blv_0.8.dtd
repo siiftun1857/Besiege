@@ -8,7 +8,7 @@
 <!ELEMENT Objects (Object*)>
 <!ELEMENT Object (Position,Rotation?,Scale?,Data)>
 
-<!ELEMENT Data (StringArray*,String*,Single*,Boolean*,Vector3*,Color*,MKey*,MMenu*,MToggle*,MSlider*,MLimits*,MColourSlider*)>
+<!ELEMENT Data (Integer*,StringArray*,String*,Single*,Boolean*,Vector3*,Color*,MKey*,MMenu*,MToggle*,MSlider*,MLimits*,MColourSlider*)>
 
 <!ATTLIST Object
   ID CDATA #REQUIRED
@@ -16,8 +16,8 @@
 
 <!ATTLIST LevelSettings
   EditorVersion CDATA #REQUIRED
-  UseVoting type (true|false) #REQUIRED
-  CurtainMode type (true|false) #REQUIRED
+  UseVoting type (True|False) #REQUIRED
+  CurtainMode type (True|False) #REQUIRED
   AllowExcessPlayers type (true|false) #REQUIRED
   HidePlayerLabels type (true|false) #REQUIRED
   AllowCopyMachine type (true|false) #REQUIRED
@@ -92,6 +92,7 @@
 <!ELEMENT G (#PCDATA)>
 <!ELEMENT B (#PCDATA)>
 
+<!ELEMENT Integer (#PCDATA)>
 <!ELEMENT String (#PCDATA)>
 <!ELEMENT StringArray (#PCDATA)>
 <!ELEMENT Single (#PCDATA)>
@@ -106,6 +107,7 @@
 <!ELEMENT MLimits (#PCDATA)>
 <!ELEMENT MColourSlider (R,G,B)>
 
+<!ATTLIST Integer key CDATA #REQUIRED>
 <!ATTLIST String key CDATA #REQUIRED>
 <!ATTLIST StringArray key CDATA #REQUIRED>
 <!ATTLIST Single key CDATA #REQUIRED>

@@ -1,0 +1,153 @@
+<!-- Bsg Machine files XSD for besiege 0.3 -->
+<!-- https://raw.githubusercontent.com/siiftun1857/Besiege/master/xsd/bsg_0.3.xsd -->
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema
+	xmlns:xs="https://github.com/siiftun1857/Besiege"
+	targetNamespace="https://github.com/siiftun1857/Besiege"
+	xmlns="https://github.com/siiftun1857/Besiege"
+	elementFormDefault="qualified">
+	
+	<xs:element name="Machine">
+		<xs:complexType>
+			<xs:attribute name="version" type="xs:integer" fixed="1" use="required"/>
+			<xs:attribute name="bsgVersion" type="xs:decimal" use="required"/>
+			<xs:attribute name="name" type="xs:string" use="required"/>
+			<xs:sequence>
+				<xs:element name="Global" type="Global">
+				<xs:element name="Data" type="Data"/>
+				<xs:element name="Blocks" type="Blocks">
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="Global">
+		<xs:sequence>
+			<xs:element name="Position" type="Position"/>
+			<xs:element name="Rotation" type="Rotation"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="Blocks">
+		<xs:element name="Block" type="block" minOccurs="0" maxOccurs="unbounded"/>
+	</xs:complexType>
+	
+	<xs:complexType name="Block">
+		<xs:attribute name="id" type="xs:string" use="required"/>
+		<xs:attribute name="guid" type="xs:string" use="required"/>
+		<xs:sequence>
+			<xs:element name="Transform" type="Transform">
+			<xs:element name="Settings" type="Settings"/>
+			<xs:element name="Data" type="Data">
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="Transform">
+		<xs:sequence>
+			<xs:element name="Position" type="Position"/>
+			<xs:element name="Rotation" type="Rotation"/>
+			<xs:element name="Scale" type="Scale"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="Settings">
+		<xs:sequence>
+			<xs:element name="Skin" type="Skin"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Skin">
+		<xs:attribute name="name" type="xs:string" use="required"/>
+		<xs:attribute name="id" type="xs:string" use="required"/>
+	</xs:complexType>
+	
+	<xs:complexType name="Position">
+		<xs:attribute name="x" type="xs:string" use="required"/>
+		<xs:attribute name="y" type="xs:string" use="required"/>
+		<xs:attribute name="z" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="Rotation">
+		<xs:attribute name="x" type="xs:string" use="required"/>
+		<xs:attribute name="y" type="xs:string" use="required"/>
+		<xs:attribute name="z" type="xs:string" use="required"/>
+		<xs:attribute name="w" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="Scale">
+		<xs:attribute name="x" type="xs:string" use="required"/>
+		<xs:attribute name="y" type="xs:string" use="required"/>
+		<xs:attribute name="z" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="Data">
+		<xs:all minOccurs="0">
+			<xs:element name="StringArray" 		type="StringArray" 		minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="String" 			type="String" 			minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="Single" 			type="Single" 			minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="Boolean" 			type="Boolean" 			minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="Vector3" 			type="Vector3" 			minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="Color" 			type="Color" 			minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="MKey" 			type="MKey" 			minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="MMenu" 			type="MMenu" 			minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="MToggle" 			type="MToggle" 			minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="MSlider" 			type="MSlider" 			minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="MLimits" 			type="MLimits" 			minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="MColourSlider" 	type="MColourSlider" 	minOccurs="0" maxOccurs="unbounded">
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="StringArray">
+		<xs:attribute name="key" type="xs:string" use="required"/>
+		<xs:simpleContent>
+			<xs:extension base="xs:string" />
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="String">
+		<xs:attribute name="key" type="xs:string" use="required"/>
+		<xs:simpleContent>
+			<xs:extension base="xs:string" />
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="Boolean">
+		<xs:attribute name="key" type="xs:string" use="required"/>
+		<xs:simpleContent>
+			<xs:extension base="xs:boolean" />
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="Vector3">
+		<xs:attribute name="key" type="xs:string" use="required"/>
+		<xs:sequence>
+			<xs:element name="X" type="xs:string"/>
+			<xs:element name="Y" type="xs:string"/>
+			<xs:element name="Z" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Color">
+		<xs:attribute name="key" type="xs:string" use="required"/>
+		<xs:sequence>
+			<xs:element name="R" type="xs:string"/>
+			<xs:element name="G" type="xs:string"/>
+			<xs:element name="B" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MKey">
+		<xs:attribute name="key" type="xs:string" use="required"/>
+		<xs:any minOccurs="0"/>
+	</xs:complexType>
+	<xs:complexType name="MMenu">
+		<xs:attribute name="key" type="xs:string" use="required"/>
+		<xs:any minOccurs="0"/>
+	</xs:complexType>
+	<xs:complexType name="MToggle">
+		<xs:attribute name="key" type="xs:string" use="required"/>
+		<xs:any minOccurs="0"/>
+	</xs:complexType>
+	<xs:complexType name="MSlider">
+		<xs:attribute name="key" type="xs:string" use="required"/>
+		<xs:any minOccurs="0"/>
+	</xs:complexType>
+	<xs:complexType name="MLimits">
+		<xs:attribute name="key" type="xs:string" use="required"/>
+		<xs:any minOccurs="0"/>
+	</xs:complexType>
+	<xs:complexType name="MColourSlider">
+		<xs:attribute name="key" type="xs:string" use="required"/>
+		<xs:any minOccurs="0"/>
+	</xs:complexType>
+
+</xs:schema>
