@@ -12,7 +12,7 @@
 <!DOCTYPE Machine SYSTEM "https://raw.githubusercontent.com/siiftun1857/BesiegeDTD/master/dtd/bsg_0.3.dtd">
 ...
 ```
-引用bsg0.8的bvl关卡文件dtd:
+引用bsg0.8的blv关卡文件dtd:
 ```xml
 <!DOCTYPE Level SYSTEM "https://raw.githubusercontent.com/siiftun1857/BesiegeDTD/master/dtd/blv_0.8.dtd">
 ...
@@ -28,7 +28,7 @@
 	xsi:schemaLocation="https://raw.githubusercontent.com/siiftun1857/BesiegeDTD/master/xsd/bsg_0.3.xsd">
 ...
 ```
-来引用bsg0.8的bvl关卡文件dtd:
+来引用bsg0.8的blv关卡文件dtd:
 ```xml
 <Level 
 	xmlns="https://github.com/siiftun1857/Besiege"
