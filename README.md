@@ -19,9 +19,10 @@
 ```
 ### Besiege XSD
 (WIP)
+
 引用bsg0.3的bsg工程文件dtd:
 ```xml
-<Machine xsi:schemaLocation="https://raw.githubusercontent.com/siiftun1857/BesiegeDTD/master/xsd/blv_0.8.xsd">
+<Machine xsi:schemaLocation="https://raw.githubusercontent.com/siiftun1857/BesiegeDTD/master/xsd/bsg_0.3.xsd">
 ...
 ```
 来引用bsg0.8的bvl关卡文件dtd:
