@@ -18,10 +18,10 @@
   EditorVersion CDATA #REQUIRED
   UseVoting type (True|False) #REQUIRED
   CurtainMode type (True|False) #REQUIRED
-  AllowExcessPlayers type (true|false) #REQUIRED
-  HidePlayerLabels type (true|false) #REQUIRED
-  AllowCopyMachine type (true|false) #REQUIRED
-  allowModMachines type (true|false) #REQUIRED
+  AllowExcessPlayers type (True|False) #REQUIRED
+  HidePlayerLabels type (True|False) #REQUIRED
+  AllowCopyMachine type (True|False) #REQUIRED
+  allowModMachines type (True|False) #REQUIRED
   Environment CDATA #REQUIRED
   MinPlayers CDATA #IMPLIED
   MaxPlayers CDATA #IMPLIED>

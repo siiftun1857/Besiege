@@ -16,10 +16,85 @@
 	
 	<xs:element name="LevelSettings">
 		<xs:complexType>
-			<xs:attribute name="" type="xs:string" use=""/>
-			<xs:attribute name="" type="xs:boolean" use=""/>
+			<xs:attribute name="EditorVersion" 			type="xs:decimal" use="required"/>
+			<xs:attribute name="UseVoting" 				type="xs:boolean" use="required"/>
+			<xs:attribute name="CurtainMode" 			type="xs:boolean" use="required"/>
+			<xs:attribute name="AllowExcessPlayers" 	type="xs:boolean" use="required"/>
+			<xs:attribute name="HidePlayerLabels" 		type="xs:boolean" use="required"/>
+			<xs:attribute name="AllowCopyMachine" 		type="xs:boolean" use="required"/>
+			<xs:attribute name="allowModMachines" 		type="xs:boolean" use="required"/>
+			<xs:attribute name="Environment" 			type="xs:string" use="required"/>
+			<xs:attribute name="MinPlayers" 			type="xs:integer" use="implied"/>
+			<xs:attribute name="MaxPlayers" 			type="xs:integer" use="implied"/>
 			<xs:sequence>
-				<xs:element name="" type="">
+				<xs:element name="DisableFire">
+					<xs:complexType>
+						<xs:attribute name="Enabled" type="xs:boolean" use="required"/>
+						<xs:attribute name="Locked" type="xs:boolean" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="DisableExplosion">
+					<xs:complexType>
+						<xs:attribute name="Enabled" type="xs:boolean" use="required"/>
+						<xs:attribute name="Locked" type="xs:boolean" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="DisableProjectiles">
+					<xs:complexType>
+						<xs:attribute name="Enabled" type="xs:boolean" use="required"/>
+						<xs:attribute name="Locked" type="xs:boolean" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ZeroG">
+					<xs:complexType>
+						<xs:attribute name="Enabled" type="xs:boolean" use="required"/>
+						<xs:attribute name="Locked" type="xs:boolean" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="InfiniteAmmo">
+					<xs:complexType>
+						<xs:attribute name="Enabled" type="xs:boolean" use="required"/>
+						<xs:attribute name="Locked" type="xs:boolean" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Invincibility">
+					<xs:complexType>
+						<xs:attribute name="Enabled" type="xs:boolean" use="required"/>
+						<xs:attribute name="Locked" type="xs:boolean" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ExplosiveCannonballs">
+					<xs:complexType>
+						<xs:attribute name="Enabled" type="xs:boolean" use="required"/>
+						<xs:attribute name="Locked" type="xs:boolean" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="DisableBounds">
+					<xs:complexType>
+						<xs:attribute name="Enabled" type="xs:boolean" use="required"/>
+						<xs:attribute name="Locked" type="xs:boolean" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				
+				<xs:element name="BlockLimiter" minOccurs="0" maxOccurs="1">
+					<xs:complexType>
+						<xs:element name="BlockLimit" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:attribute name="id" type="xs:string" use="required"/>
+								<xs:attribute name="limit" type="xs:string" use="required"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="AllowedMachines" minOccurs="0" maxOccurs="1">
+					<xs:complexType>
+						<xs:element name="LevelMachine" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:attribute name="info" type="xs:string" use="required"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:complexType>
+				</xs:element>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -32,8 +107,9 @@
 		<xs:attribute name="ID" type="xs:string" use="required"/>
 		<xs:attribute name="Prefab" type="xs:string" use="required"/>
 		<xs:sequence>
-			<xs:element name="Transform" type="Transform">
-			<xs:element name="Settings" type="Settings"/>
+			<xs:element name="Position" type="Position"/>
+			<xs:element name="Rotation" type="Rotation" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Scale" type="Scale" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="Data" type="Data">
 		</xs:sequence>
 	</xs:complexType>
