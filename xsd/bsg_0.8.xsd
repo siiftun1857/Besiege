@@ -1,5 +1,5 @@
-<!-- Bsg Machine files XSD for besiege 0.3 -->
-<!-- https://raw.githubusercontent.com/siiftun1857/Besiege/master/xsd/bsg_0.3.xsd -->
+<!-- Bsg Machine files XSD for besiege 0.8 -->
+<!-- https://raw.githubusercontent.com/siiftun1857/Besiege/master/xsd/bsg_0.8.xsd -->
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema
 	xmlns:xs="https://github.com/siiftun1857/Besiege"
@@ -77,6 +77,7 @@
 	</xs:complexType>
 	<xs:complexType name="Data">
 		<xs:all minOccurs="0">
+			<xs:element name="Integer" 			type="Integer" 			minOccurs="0" maxOccurs="unbounded">
 			<xs:element name="StringArray" 		type="StringArray" 		minOccurs="0" maxOccurs="unbounded">
 			<xs:element name="String" 			type="String" 			minOccurs="0" maxOccurs="unbounded">
 			<xs:element name="Single" 			type="Single" 			minOccurs="0" maxOccurs="unbounded">
@@ -90,6 +91,12 @@
 			<xs:element name="MLimits" 			type="MLimits" 			minOccurs="0" maxOccurs="unbounded">
 			<xs:element name="MColourSlider" 	type="MColourSlider" 	minOccurs="0" maxOccurs="unbounded">
 		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="Integer">
+		<xs:attribute name="key" type="xs:string" use="required"/>
+		<xs:simpleContent>
+			<xs:extension base="xs:integer" />
+		</xs:simpleContent>
 	</xs:complexType>
 	<xs:complexType name="StringArray">
 		<xs:attribute name="key" type="xs:string" use="required"/>

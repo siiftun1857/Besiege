@@ -18,17 +18,15 @@
 ...
 ```
 ### Besiege XSD
-(WIP)
-
-引用bsg0.3的bsg工程文件dtd:
+引用bsg0.8的bsg工程文件xsd:
 ```xml
 <Machine 
 	xmlns="https://github.com/siiftun1857/Besiege"
 	xmlns:xsi="https://github.com/siiftun1857/Besiege"
-	xsi:schemaLocation="https://raw.githubusercontent.com/siiftun1857/BesiegeDTD/master/xsd/bsg_0.3.xsd">
+	xsi:schemaLocation="https://raw.githubusercontent.com/siiftun1857/BesiegeDTD/master/xsd/bsg_0.8.xsd">
 ...
 ```
-来引用bsg0.8的blv关卡文件dtd:
+来引用bsg0.8的blv关卡文件xsd:
 ```xml
 <Level 
 	xmlns="https://github.com/siiftun1857/Besiege"
