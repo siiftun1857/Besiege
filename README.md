@@ -1,6 +1,6 @@
 # siiftun1857的Besiege github项目
 这里是siiftun1857有关Besiege的github项目。
-## Besiege xml文件结构描述文件使用
+## Besiege xml文件结构描述文件
 ### Besiege dtd
 引用兼容所有版本1的bsg工程文件的dtd:
 ```xml
